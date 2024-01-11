@@ -12,7 +12,7 @@ public class BalancedParenthesis {
         Stack<Character> stack = new Stack<>(s.length());
         boolean isBalanced = false;
         char[] charArray = s.toCharArray();
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < charArray.length; i++) {
             if(('(' == (charArray[i])) || ('[' == (charArray[i])) || ('{' == (charArray[i]))) {
                 stack.push(charArray[i]);
             } else {
