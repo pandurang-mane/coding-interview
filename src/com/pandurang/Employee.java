@@ -63,7 +63,13 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public int compareTo(Employee o) {
-        return this.salary - o.getSalary();
+        // compare on two attributes -> name, salary if name is same
+        int result = this.getName().compareTo(o.getName());
+        if(result == 0) {
+            return Integer.valueOf(this.getSalary()).compareTo(o.getSalary());
+        }
+        return result;
+
     }
 
     @Override
