@@ -8,19 +8,19 @@ public class BalancedParenthesis {
         System.out.println(isBalanced);
     }
 
-    private static boolean checkBalancedParenthesis(String s) {
-        Stack<Character> stack = new Stack<>(s.length());
+    private static boolean checkBalancedParenthesis(String brackets) {
+        Stack<Character> stack = new Stack<>(brackets.length());
         boolean isBalanced = false;
-        char[] charArray = s.toCharArray();
-        for (int i = 0; i < charArray.length; i++) {
-            if(('(' == (charArray[i])) || ('[' == (charArray[i])) || ('{' == (charArray[i]))) {
-                stack.push(charArray[i]);
+        char[] bracketsCharArray = brackets.toCharArray();
+        for (char bracket : bracketsCharArray) {
+            if (('(' == bracket) || ('[' == bracket) || ('{' == bracket)) {
+                stack.push(bracket);
             } else {
-                if((charArray[i] == ')') && (stack.pop() == '(')) {
+                if ((bracket == ')') && (stack.pop() == '(')) {
                     isBalanced = true;
-                } else if((charArray[i] == ']') && (stack.pop() == '[')) {
+                } else if ((bracket == ']') && (stack.pop() == '[')) {
                     isBalanced = true;
-                } else if((charArray[i] == '}') && (stack.pop() == '{')) {
+                } else if ((bracket == '}') && (stack.pop() == '{')) {
                     isBalanced = true;
                 } else {
                     isBalanced = false;
