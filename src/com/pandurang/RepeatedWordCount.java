@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class RepeatedWordCount {
+
     public static void main(String[] args) {
         findRepeatedWord("I am a java developer and I am proud of it ");
     }

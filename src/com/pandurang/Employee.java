@@ -66,7 +66,7 @@ public class Employee implements Comparable<Employee> {
         // compare on two attributes -> name, salary if name is same
         int result = this.getName().compareTo(o.getName());
         if(result == 0) {
-            return Integer.valueOf(this.getSalary()).compareTo(o.getSalary());
+            return Integer.compare(this.getSalary(), o.getSalary());
         }
         return result;
 

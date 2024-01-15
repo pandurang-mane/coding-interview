@@ -4,7 +4,8 @@ public class BalancedParenthesis {
 
 
     public static void main(String[] args) {
-        boolean isBalanced = checkBalancedParenthesis("{[(])}");
+        String brackets = "{[(])}";
+        boolean isBalanced = checkBalancedParenthesis(brackets);
         System.out.println(isBalanced);
     }
 
@@ -23,8 +24,7 @@ public class BalancedParenthesis {
                 } else if ((bracket == '}') && (stack.pop() == '{')) {
                     isBalanced = true;
                 } else {
-                    isBalanced = false;
-                    return isBalanced;
+                    return false;
                 }
             }
         }
