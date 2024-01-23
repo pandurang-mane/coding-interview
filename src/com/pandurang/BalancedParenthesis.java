@@ -6,7 +6,7 @@ public class BalancedParenthesis {
     public static void main(String[] args) {
         String brackets = "{[(])}";
         boolean isBalanced = checkBalancedParenthesis(brackets);
-        System.out.println(isBalanced);
+        System.out.println(isBalanced ? "Parenthesis is balanced" : "Parenthesis is not balanced");
     }
 
     private static boolean checkBalancedParenthesis(String brackets) {
